@@ -64,7 +64,8 @@ async function setupDiscordSdk() {
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <h1>Click the button!</h1>
+    <img src="${rocketLogo}" class="logo" alt="Discord" />
+    <h1>Hello, World!</h1>
     <button type="button" id="counter" onclick="myFunction()">Click Me!</button>
   </div>
 `;
