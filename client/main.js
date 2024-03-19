@@ -56,7 +56,7 @@ async function setupDiscordSdk() {
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Click the button!</h1>
-    
+    <button type="button" id="counter" onclick="myFunction()">Click Me!</button>
   </div>
 `;
 let counter = 0;
