@@ -99,6 +99,7 @@ button:focus-visible {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  margin: auto;
 }
 
 .counter:hover {background-color: #3e8e41}
