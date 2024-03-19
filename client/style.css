@@ -93,7 +93,6 @@ button:focus-visible {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  margin: auto;
   outline: none;
   color: #fff;
   background-color: #04AA6D;
