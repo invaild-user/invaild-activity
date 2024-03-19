@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      let counter = 0
-      document.getElementById("counter").addEventListener("click", myFunction);
-
-      function myFunction() {
-        document.getElementById("counter").innerHTML.textContent = counter++;
-}
-    </script>
     <title>Hello, World</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+    <script>
+      let counter = 0;
+      const counterButton = document.getElementById("counter");
+  
+      counterButton.addEventListener("click", myFunction);
+  
+      function myFunction() {
+        counter++;
+        counterButton.textContent = counter;
+      }
+    </script>
   </body>
 </html>
