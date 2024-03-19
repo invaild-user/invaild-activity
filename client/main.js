@@ -53,6 +53,7 @@ async function setupDiscordSdk() {
   }
 }
 
+
 document.querySelector('#app').innerHTML = `
   <div>
     <img src="${rocketLogo}" class="logo" alt="Discord" />
@@ -60,3 +61,12 @@ document.querySelector('#app').innerHTML = `
     <button type="button" class="counter" onclick="myFunction()">Click Me!</button>
   </div>
 `;
+let counter = 0;
+      const counterButton = document.getElementById("counter");
+  
+      counterButton.addEventListener("click", myFunction);
+  
+      function myFunction() {
+        counter++;
+        counterButton.textContent = counter;
+      }
