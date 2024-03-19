@@ -52,7 +52,15 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
-
+  let counter = 0;
+  const counterButton = document.getElementById("counter");
+  
+  counterButton.addEventListener("click", myFunction);
+  
+      function myFunction() {
+        counter++;
+        counterButton.textContent = counter;
+      }
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -61,12 +69,3 @@ document.querySelector('#app').innerHTML = `
     <button type="button" class="counter" onclick="myFunction()">Click Me!</button>
   </div>
 `;
-let counter = 0;
-      const counterButton = document.getElementById("counter");
-  
-      counterButton.addEventListener("click", myFunction);
-  
-      function myFunction() {
-        counter++;
-        counterButton.textContent = counter;
-      }
