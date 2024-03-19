@@ -52,20 +52,11 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
-  let counter = 0;
-  const counterButton = document.getElementById("counter");
-  
-  counterButton.addEventListener("click", myFunction);
-  
-      function myFunction() {
-        counter++;
-        counterButton.textContent = counter;
-      }
 
 document.querySelector('#app').innerHTML = `
   <div>
     <img src="${rocketLogo}" class="logo" alt="Discord" />
     <h1>Hello, World!</h1>
-    <button type="button" id="counter" onclick="myFunction()">Click Me!</button>
+    
   </div>
 `;
