@@ -86,7 +86,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.counter {
+.counter { background-color: red;}
+/*.counter {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -107,5 +108,5 @@ button:focus-visible {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+}*/
 /* Style buttons */
