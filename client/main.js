@@ -1,5 +1,5 @@
 import { DiscordSDK } from "@discord/embedded-app-sdk";
-
+const DiscordRPC = require('../');
 import rocketLogo from '/rocket.png';
 import "./style.css";
 
@@ -52,6 +52,45 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
+const clientId = '280984871685062656';
+
+// Only needed if you want to use spectate, join, or ask to join
+DiscordRPC.register(clientId);
+
+const rpc = new DiscordRPC.Client({ transport: 'ipc' });
+const startTimestamp = new Date();
+
+async function setActivity() {
+  if (!rpc || !mainWindow) {
+    return;
+  }
+
+  const boops = await mainWindow.webContents.executeJavaScript('window.boops');
+
+  // You'll need to have snek_large and snek_small assets uploaded to
+  // https://discord.com/developers/applications/<application_id>/rich-presence/assets
+  rpc.setActivity({
+    details: `booped ${boops} times`,
+    state: 'in slither party',
+    startTimestamp,
+    largeImageKey: 'snek_large',
+    largeImageText: 'tea is delicious',
+    smallImageKey: 'snek_small',
+    smallImageText: 'i am my own pillows',
+    instance: false,
+  });
+}
+
+rpc.on('ready', () => {
+  setActivity();
+
+  // activity can only be set every 15 seconds
+  setInterval(() => {
+    setActivity();
+  }, 15e3);
+});
+
+rpc.login({ clientId }).catch(console.error);
 
 document.querySelector('#app').innerHTML = `
   <div>
