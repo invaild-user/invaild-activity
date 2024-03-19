@@ -87,7 +87,7 @@ button:focus-visible {
   }
 }
 .counter {
-  display: inline-block;
+  display: block;
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
