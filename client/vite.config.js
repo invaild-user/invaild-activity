@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://invalid-activity.kings-world.net/',
+        target: 'https://invalid-activity.kings-world.net',
         changeOrigin: true,
         secure: true,
         ws: true,
