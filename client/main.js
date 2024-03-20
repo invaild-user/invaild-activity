@@ -52,11 +52,11 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
-await discordSdk.commands.setActivity({ 
-  activity: { 
-    type: 5
-  }
-});
+// await discordSdk.commands.setActivity({ 
+  // activity: { 
+    // type: 5
+  // }
+// });
 
 document.querySelector('#app').innerHTML = `
   <div>
