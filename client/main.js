@@ -74,7 +74,7 @@ let counter = 0;
         counterButton.textContent = counter;
           if (counter > 100) {
             counterButton.style.backgroundColor = "red";
-          else if (counter > 200) {
+          else if (counter > 200)
             document.body.style.backgroundColor = "purple";
           }
       }
