@@ -52,6 +52,13 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
+await discordSdk.commands.setActivity({ 
+  activity: { 
+    type: 0, 
+    details: 'Details',
+    state: 'Playing' 
+  }
+});
 
 document.querySelector('#app').innerHTML = `
   <div>
