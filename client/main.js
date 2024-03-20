@@ -54,7 +54,7 @@ async function setupDiscordSdk() {
 }
 await discordSdk.commands.setActivity({ 
   activity: { 
-    type: 0, 
+    type: 5, 
     details: 'Details',
     state: 'Playing' 
   }
