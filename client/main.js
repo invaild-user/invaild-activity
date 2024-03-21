@@ -73,9 +73,9 @@ let counter = 0;
         counter++;
         counterButton.textContent = counter;
           if (counter > 200) {
-            counterButton.style.backgroundColor = #000000;
+            counterButton.style.backgroundColor = '#000000';
           } else if (counter > 100) {
-            counterButton.style.backgroundColor = #111111;
+            counterButton.style.backgroundColor = '#111111';
           }
       }
 
