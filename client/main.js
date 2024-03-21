@@ -72,10 +72,10 @@ let counter = 0;
       function myFunction() {
         counter++;
         counterButton.textContent = counter;
-          if (counter > 100) {
-            counterButton.style.backgroundColor = "red";
-          } if (counter > 200) {
-            document.body.style.backgroundColor = "purple";
+          if (counter > 200) {
+            counterButton.style.backgroundColor = #000000;
+          } else if (counter > 100) {
+            counterButton.style.backgroundColor = #111111;
           }
       }
 
