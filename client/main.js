@@ -76,7 +76,3 @@ let counter = 0;
             counterButton.style.backgroundColor = '#111111';
           }
       }
-
-      discordSdk.commands.openExternalLink({
-        url: 'https://discord.com/oauth2/authorize?client_id=1219430550478131291',
-      });
