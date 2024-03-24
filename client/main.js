@@ -70,7 +70,9 @@ let counter = 0;
   
       function myFunction() {
         counter++;
-        color++;
+        color + 100;
         counterButton.textContent = counter;
-        counterButton.style.backgroundColor = color; 
+        if (counter % 100 === 0) {
+          counterButton.backgroundColor = color;
+        }
       }
