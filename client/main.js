@@ -1,6 +1,6 @@
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 
-import rocketLogo from '/rocket.png';
+// import rocketLogo from '/rocket.png';
 import "./style.css";
 
 
@@ -73,6 +73,6 @@ let counter = 0;
         color + 100;
         counterButton.textContent = counter;
         if (counter % 100 === 0) {
-          counterButton.backgroundColor = color;
+          counterButton.style.backgroundColor = color;
         }
       }
