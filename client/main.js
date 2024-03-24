@@ -70,9 +70,15 @@ let counter = 0;
       function myFunction() {
         counter++;
         counterButton.textContent = counter;
-          if (counter > 200) {
+          if (counter > 100) {
             counterButton.style.backgroundColor = '#000000';
-          } else if (counter > 100) {
+          } if (counter > 200) {
             counterButton.style.backgroundColor = '#111111';
+          } if (counter > 300) {
+            counterButton.style.backgroundColor = '#222222';
+          } if (counter > 400) {
+            counterButton.style.backgroundColor = '#333333';
+          } if (counter > 500) {
+            counterButton.style.backgroundColor = '#444444';
           }
       }
