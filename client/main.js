@@ -4,7 +4,6 @@ import rocketLogo from '/rocket.png';
 import "./style.css";
 
 
-
 // Will eventually store the authenticated user's access_token
 let auth;
 
