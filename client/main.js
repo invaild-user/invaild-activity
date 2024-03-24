@@ -64,7 +64,7 @@ document.querySelector('#app').innerHTML = `
 `;
 
 const tag = '#';
-let firstHalf = '000';
+let color = 0; // Initialize color to 0
 let counter = 0;
 const counterButton = document.getElementById("counter");
 
@@ -72,11 +72,9 @@ counterButton.addEventListener("click", myFunction);
 
 function myFunction() {
     counter++;
-    firstHalf += 100; // Increment color by 100
-
+    color += 100; // Increment color by 100
     counterButton.textContent = counter;
-    if 
     if (counter % 100 === 0) {
-        counterButton.style.backgroundColor =
+        counterButton.style.backgroundColor = tag + color.toString(16).padStart(6, '0'); // Convert color to hexadecimal string and pad with zeroes
     }
 }
