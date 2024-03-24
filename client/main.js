@@ -1,5 +1,5 @@
 import { DiscordSDK } from "@discord/embedded-app-sdk";
-const discordSdk = new DiscordSDK(clientId);
+
 import rocketLogo from '/rocket.png';
 import "./style.css";
 
@@ -32,9 +32,7 @@ async function setupDiscordSdk() {
     ],
   });
 
-  discordSdk.commands.openExternalLink({
-    url: 'https://discord.com/oauth2/authorize?client_id=1219430550478131291',
-  });
+  
 
   // Retrieve an access_token from your activity's server
   const response = await fetch("/api/token", {
@@ -57,11 +55,6 @@ async function setupDiscordSdk() {
     throw new Error("Authenticate command failed");
   }
 }
-// await discordSdk.commands.setActivity({ 
-  // activity: { 
-    // type: 5
-  // }
-// });
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -84,3 +77,6 @@ let counter = 0;
           }
       }
 
+      discordSdk.commands.openExternalLink({
+        url: 'https://discord.com/oauth2/authorize?client_id=1219430550478131291',
+      });
