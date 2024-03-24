@@ -72,4 +72,5 @@ let counter = 0;
         counter++;
         color++;
         counterButton.textContent = counter;
-        counterButton.style.backgroundColor = color;
+        counterButton.style.backgroundColor = color; 
+      }
