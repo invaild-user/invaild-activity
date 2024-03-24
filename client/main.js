@@ -1,7 +1,9 @@
 import { DiscordSDK } from "@discord/embedded-app-sdk";
-
+const discordSdk = new DiscordSDK(clientId);
 import rocketLogo from '/rocket.png';
 import "./style.css";
+
+
 
 // Will eventually store the authenticated user's access_token
 let auth;
@@ -29,6 +31,10 @@ async function setupDiscordSdk() {
       "identify",
       "guilds",
     ],
+  });
+
+  discordSdk.commands.openExternalLink({
+    url: 'https://discord.com/oauth2/authorize?client_id=1219430550478131291',
   });
 
   // Retrieve an access_token from your activity's server
