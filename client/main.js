@@ -62,6 +62,7 @@ document.querySelector('#app').innerHTML = `
     <button type="button" id="counter" onclick="myFunction()">Click Me!</button>
   </div>
 `;
+let color = '#000000';
 let counter = 0;
           const counterButton = document.getElementById("counter");
   
@@ -69,16 +70,6 @@ let counter = 0;
   
       function myFunction() {
         counter++;
+        color++;
         counterButton.textContent = counter;
-          if (counter > 100) {
-            counterButton.style.backgroundColor = '#000000';
-          } if (counter > 200) {
-            counterButton.style.backgroundColor = '#111111';
-          } if (counter > 300) {
-            counterButton.style.backgroundColor = '#222222';
-          } if (counter > 400) {
-            counterButton.style.backgroundColor = '#333333';
-          } if (counter > 500) {
-            counterButton.style.backgroundColor = '#444444';
-          }
-      }
+        counterButton.style.backgroundColor = color;
