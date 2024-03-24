@@ -64,35 +64,6 @@ document.querySelector('#app').innerHTML = `
 `;
 
 const tag = '#';
-let color = 0; // Initialize color to 0
-let counter = 0;
-const counterButton = document.getElementById("counter");
-
-// Mapping function to convert numbers greater than 9 to hexadecimal characters
-function toHexChar(num) {
-    if (num >= 0 && num <= 9) {
-        return num.toString(); // For numbers 0-9, return them as string
-    } else {
-        return String.fromCharCode(97 + num - 10); // For numbers greater than 9, map to 'a', 'b', 'c', etc.
-    }
-}
-
-counterButton.addEventListener("click", myFunction);
-
-function myFunction() {
-    counter++;
-    color += 100; // Increment color by 100
-    counterButton.textContent = counter;
-    if (counter % 100 === 0) {
-        let hexColor = tag;
-        for (let i = 0; i < 6; i++) {
-            hexColor += toHexChar(Math.floor(color / Math.pow(16, 5 - i)) % 16); // Convert each pair of color values to hexadecimal characters
-        }
-        counterButton.style.backgroundColor = hexColor;
-    }
-}
-/*
-const tag = '#';
 let firstHalf = '000';
 let counter = 0;
 const counterButton = document.getElementById("counter");
@@ -109,4 +80,3 @@ function myFunction() {
         counterButton.style.backgroundColor =
     }
 }
-*/
