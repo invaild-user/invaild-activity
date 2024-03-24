@@ -63,17 +63,17 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 const tag = '#';
-let color = parseInt('000000');
+let color = 0; // Initialize color to 0
 let counter = 0;
-          const counterButton = document.getElementById("counter");
-  
-          counterButton.addEventListener("click", myFunction);
-  
-      function myFunction() {
-        counter++;
-        color + 100;
-        counterButton.textContent = counter;
-        if (counter % 100 === 0) {
-          counterButton.style.backgroundColor = tag + color;
-        }
-      }
+const counterButton = document.getElementById("counter");
+
+counterButton.addEventListener("click", myFunction);
+
+function myFunction() {
+    counter++;
+    color += 100; // Increment color by 100
+    counterButton.textContent = counter;
+    if (counter % 100 === 0) {
+        counterButton.style.backgroundColor = tag + color.toString(16).padStart(6, '0'); // Convert color to hexadecimal string and pad with zeroes
+    }
+}
